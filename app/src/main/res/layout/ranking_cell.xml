@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+            android:id="@+id/back_image"
+            app:srcCompat="@drawable/gray_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+            android:id="@+id/transparent_back"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/white_background"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintStart_toStartOf="@+id/back_image"
+            app:layout_constraintTop_toTopOf="@+id/back_image"
+            app:layout_constraintEnd_toEndOf="@+id/back_image"
+            app:layout_constraintBottom_toBottomOf="@+id/back_image"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar_image"
+            android:src="@drawable/ic_account_circle_white_24dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:civ_border_width="2dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:civ_border_color="@android:color/white"
+            android:background="@drawable/gray_circle_frame"
+            app:layout_constraintStart_toStartOf="@+id/back_image"
+            app:layout_constraintTop_toTopOf="@+id/back_image"
+            android:visibility="visible"/>
+
+    <TextView
+            android:id="@+id/rank"
+            android:text="0位"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/orange_gradient"
+            android:textColor="@android:color/white"
+            android:padding="3dp"
+            app:layout_constraintStart_toStartOf="@+id/avatar_image"
+            app:layout_constraintTop_toTopOf="@+id/avatar_image"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+    <TextView
+            android:id="@+id/point"
+            android:text="1,000,000,000SP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/orangered"
+            app:layout_constraintStart_toStartOf="@+id/avatar_image"
+            app:layout_constraintTop_toBottomOf="@+id/avatar_image"
+            app:layout_constraintEnd_toEndOf="@+id/avatar_image"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+    <TextView
+            android:id="@+id/disp_name"
+            android:text="@string/disp_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            app:layout_constraintStart_toEndOf="@+id/avatar_image"
+            app:layout_constraintTop_toTopOf="@+id/back_image"
+            app:layout_constraintEnd_toEndOf="@+id/back_image" />
+
+    <TextView
+            android:id="@+id/wp_name"
+            android:text="@string/wp_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#696969"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            app:layout_constraintStart_toEndOf="@+id/avatar_image"
+            app:layout_constraintTop_toBottomOf="@+id/disp_name"
+            app:layout_constraintEnd_toEndOf="@+id/back_image" />
+
+    <TextView
+            android:id="@+id/profile"
+            android:text="@string/profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintStart_toEndOf="@+id/avatar_image"
+            app:layout_constraintTop_toBottomOf="@+id/wp_name"
+            app:layout_constraintEnd_toEndOf="@+id/back_image" />
+
+    <ImageView
+            android:id="@+id/margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:color/transparent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/back_image"
+            app:layout_constraintTop_toBottomOf="@+id/point" />
+
+
+    <ImageView
+            android:id="@+id/transparent_back_image"
+            app:srcCompat="@android:color/transparent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@android:style/Widget.Holo.Light.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="@+id/transparent_back_image"
+            app:layout_constraintTop_toTopOf="@+id/transparent_back_image"
+            app:layout_constraintEnd_toEndOf="@+id/transparent_back_image"/>
+
+    <TextView
+            android:id="@+id/no_more_rank"
+            android:text="@string/no_more_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="@+id/transparent_back_image"
+            app:layout_constraintTop_toTopOf="@+id/transparent_back_image"
+            app:layout_constraintEnd_toEndOf="@+id/transparent_back_image"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+</android.support.constraint.ConstraintLayout>

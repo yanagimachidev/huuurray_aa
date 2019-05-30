@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NoGifAlertDialogFragment">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:id="@+id/transparent_back"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:srcCompat="@drawable/transparent_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+                android:id="@+id/title"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/transparent_back"
+                app:layout_constraintTop_toTopOf="@+id/transparent_back"
+                app:layout_constraintEnd_toEndOf="@+id/transparent_back"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <TextView
+                android:id="@+id/message"
+                android:text=""
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="@+id/transparent_back"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                app:layout_constraintEnd_toEndOf="@+id/transparent_back" android:textAlignment="center"/>
+
+        <Button
+                android:id="@+id/yes_button"
+                android:text="Yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/orangered"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toStartOf="@+id/transparent_back"
+                app:layout_constraintTop_toBottomOf="@+id/message"
+                app:layout_constraintEnd_toStartOf="@+id/no_button"/>
+
+        <Button
+                android:id="@+id/no_button"
+                android:text="No"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/darkgray"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toEndOf="@+id/yes_button"
+                app:layout_constraintTop_toBottomOf="@+id/message"
+                app:layout_constraintEnd_toEndOf="@+id/transparent_back" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
